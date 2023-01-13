@@ -1,12 +1,15 @@
 <?php
 
 namespace Controllers;
+require_once("Controller.php");
 
 class ArticleController extends Controller
 {
+
     public function index()
     {
-
+        $results = $this->model->allArticles();
+        return $results;
     }
 
     public function create()
