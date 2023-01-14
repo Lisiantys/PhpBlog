@@ -23,9 +23,13 @@ abstract class Model extends Database
     
     }
 
-    public function showArticle()
+    public function showArticle(int $id): mixed
     {
-    
+        $sql = "SELECT * FROM {$this->table} WHERE id = ?";
+        $stmt = $this->connect()->prepare($sql);
+        $stmt->execute([$id]);
+        $article = $stmt->fetch();
+        return $article;
     }
 
     public function updateArticle()

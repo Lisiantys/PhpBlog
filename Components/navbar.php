@@ -10,15 +10,16 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;700&display=swap" rel="stylesheet">
-    <title><?= $pageTitle ?></title>
+    <title>test</title>
 </head>
 <body>
     <header>
         <nav>
             <ul>
                 <li><a href="/">Home</a></li>
-                <li><a href="/blog.php">Blog</a></li>
-                <li><a href="/contact.php">Contact</a></li>
+                <li><a href="blog.php">Blog</a></li>
+                <li><a href="contact.php">Contact</a></li>
+                <li><a href="manager.php">Manager</a></li>
             </ul>
         </nav>
     </header>

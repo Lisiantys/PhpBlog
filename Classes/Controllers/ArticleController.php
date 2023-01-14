@@ -19,6 +19,18 @@ class ArticleController extends Controller
 
     public function show()
     {
+        $article_id = null;
+
+        if(!empty($_GET['id']) && ctype_digit($_GET['id'])){
+            $article_id = $_GET['id'];
+        }
+
+        if (!$article_id) {
+            die("Vous devez préciser un paramètre `id` dans l'URL !");
+        }
+
+        $article = $this->model->showArticle($article_id);
+        return $article;
 
     }
 

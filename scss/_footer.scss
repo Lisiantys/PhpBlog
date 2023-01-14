@@ -1,0 +1,15 @@
+footer{
+    margin-top: 5%;
+    .social-media{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 300px;
+        margin: 2% auto;
+    }
+    p{
+        width: 300px;
+        margin: auto;
+        text-align: center;
+    }
+}
