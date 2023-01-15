@@ -18,9 +18,13 @@ abstract class Model extends Database
         return $results;
     }
 
-    public function createArticle()
+    //La date de création d'un tuple est automatiquement crée par la BDD lors de la création
+    public function createArticle(string $title, string $slogan, string $text)
     {
-    
+        $sql = "INSERT INTO {$this->table}(title, slogan, content)
+        VALUES (?,?,?)";
+        $stmt = $this->connect()->prepare($sql);
+        $stmt->execute([$title, $slogan, $text]);
     }
 
     public function showArticle(int $id): mixed

@@ -12,9 +12,9 @@ class ArticleController extends Controller
         return $results;
     }
 
-    public function create()
+    public function create(string $title, string $slogan, string $text)
     {
-
+        $this->model->createArticle($title, $slogan, $text);
     }
 
     public function show()

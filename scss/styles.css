@@ -262,6 +262,7 @@ header nav ul li a:hover {
 }
 .container-manager th, .container-manager td {
   border: 1px solid #000;
+  text-align: center;
 }
 .container-manager .action {
   width: 20%;
@@ -281,9 +282,19 @@ header nav ul li a:hover {
 .container-manager a.orangered {
   background-color: orange;
 }
-.container-manager a.green {
+.container-manager input {
+  width: 100%;
+  height: 100px;
+  word-wrap: break-word;
+  word-break: break-word;
+}
+.container-manager button {
+  text-decoration: none;
+  color: white;
+  padding: 17px 15px;
+  border-radius: 50px;
+  font-size: 16px;
   background-color: green;
-  margin-left: 2%;
 }
 
 footer {
