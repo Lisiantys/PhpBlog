@@ -38,12 +38,14 @@ abstract class Model extends Database
 
     public function updateArticle()
     {
-    
+
     }
 
-    public function deleteArticle()
+    public function deleteArticle(int $id)
     {
-
+        $sql = "DELETE FROM {$this->table} WHERE id = ?";
+        $stmt = $this->connect()->prepare($sql);
+        $stmt = $stmt->execute([$id]);
     }
 
 }

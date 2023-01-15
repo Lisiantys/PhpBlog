@@ -39,8 +39,8 @@ class ArticleController extends Controller
 
     }
 
-    public function delete()
+    public function delete(int $id)
     {
-
+        $this->model->deleteArticle($id);
     }
 }

@@ -2,7 +2,7 @@
 
 require_once("Classes/Controllers/ArticleController.php"); 
 
-$allArticles = new \Controllers\ArticleController;
+$createArticle = new \Controllers\ArticleController;
 
 //Refuse l'accès au dossier et redirige manager.php
 if (!isset($_POST['title']) ||  empty($_POST['title'])
@@ -21,7 +21,7 @@ if(isset($_POST)){
             $prix = strip_tags($_POST['slogan']);
             $nombre = strip_tags($_POST['content']);
 
-            $allArticles->create($_POST['title'], $_POST['slogan'], $_POST['content']);
+            $createArticle->create($_POST['title'], $_POST['slogan'], $_POST['content']);
             header('Location: manager.php');
         }
 }      
