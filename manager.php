@@ -38,9 +38,9 @@
             ?>
                 <tr>
                     <form action="createArticle.php" method="post">
-                    <td><input required minlength="8" maxlength="20" name="title" type="text" placeholder="Entrez un Titre"></td>
+                    <td><input required minlength="8" maxlength="50" name="title" type="text" placeholder="Entrez un Titre"></td>
                     <td><?php $date = date('d-m-y h:i:s'); echo $date;  ?></td>
-                    <td><input required minlength="4" maxlength="15" name="slogan" type="text" placeholder="Entrez un Slogan"></td>
+                    <td><input required minlength="4" maxlength="20" name="slogan" type="text" placeholder="Entrez un Slogan"></td>
                     <td><input required minlength="10" maxlength="255" name="content" type="text"placeholder="Entrez un Text"></td>
                     <td>
                         <button type="submit" class="green"><i class="fa-solid fa-plus fa-2xl"></i></button>

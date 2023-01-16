@@ -39,8 +39,18 @@ class ArticleController extends Controller
         $this->model->updateArticle($title, $slogan, $content, $id);
     }
 
-    public function delete(int $id)
+    public function delete()
     {
-        $this->model->deleteArticle($id);
+        $article_id = null;
+
+        if(!empty($_GET['id']) && ctype_digit($_GET['id'])){
+            $article_id = $_GET['id'];
+        }
+
+        if (!$article_id) {
+            die("Vous devez préciser un paramètre `id` dans l'URL !");
+        }
+
+        $this->model->deleteArticle($article_id);
     }
 }

@@ -19,7 +19,6 @@
                 <li><a href="/">Home</a></li>
                 <li><a href="blog.php">Blog</a></li>
                 <li><a href="contact.php">Contact</a></li>
-                <li><a href="manager.php">Manager</a></li>
             </ul>
         </nav>
     </header>
