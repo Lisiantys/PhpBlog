@@ -19,12 +19,12 @@ abstract class Model extends Database
     }
 
     //La date de création d'un tuple est automatiquement crée par la BDD lors de la création
-    public function createArticle(string $title, string $slogan, string $text)
+    public function createArticle(string $title, string $slogan, string $content)
     {
         $sql = "INSERT INTO {$this->table}(title, slogan, content)
         VALUES (?,?,?)";
         $stmt = $this->connect()->prepare($sql);
-        $stmt->execute([$title, $slogan, $text]);
+        $stmt->execute([$title, $slogan, $content]);
     }
 
     public function showArticle(int $id): mixed
@@ -38,11 +38,11 @@ abstract class Model extends Database
 
 
     // Voir pour la mise à jour e la date quand une update est faite.
-    public function updateArticle(string $title, string $slogan, string $texte, int $id)
+    public function updateArticle(string $title, string $slogan, string $content, int $id)
     {
         $sql = "UPDATE {$this->table} SET title = ?, slogan = ?, content = ? WHERE id = ?";
-        $stmt = $this->conenct()->prepare($sql);
-        $stmt->execute([$title, $slogan, $texte, $id]);
+        $stmt = $this->connect()->prepare($sql);
+        $stmt->execute([$title, $slogan, $content, $id]);
     }
 
     public function deleteArticle(int $id)

@@ -12,9 +12,9 @@ class ArticleController extends Controller
         return $results;
     }
 
-    public function create(string $title, string $slogan, string $text)
+    public function create(string $title, string $slogan, string $content)
     {
-        $this->model->createArticle($title, $slogan, $text);
+        $this->model->createArticle($title, $slogan, $content);
     }
 
     public function show()
@@ -34,7 +34,7 @@ class ArticleController extends Controller
 
     }
 
-    public function update(string $title, string $slogan, string $texte, int $id)
+    public function update(string $title, string $slogan, string $content, int $id)
     {
         $this->model->updateArticle($title, $slogan, $content, $id);
     }
