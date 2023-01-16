@@ -43,7 +43,7 @@
                     <td><input required minlength="4" maxlength="15" name="slogan" type="text" placeholder="Entrez un Slogan"></td>
                     <td><input required minlength="10" maxlength="255" name="content" type="text"placeholder="Entrez un Text"></td>
                     <td>
-                        <button class="green"><i class="fa-solid fa-plus fa-2xl"></i></button>
+                        <button type="submit" class="green"><i class="fa-solid fa-plus fa-2xl"></i></button>
                     </td>
                     </form>
                 </tr>

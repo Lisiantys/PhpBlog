@@ -34,9 +34,9 @@ class ArticleController extends Controller
 
     }
 
-    public function update()
+    public function update(string $title, string $slogan, string $texte, int $id)
     {
-
+        $this->model->updateArticle($title, $slogan, $content, $id);
     }
 
     public function delete(int $id)

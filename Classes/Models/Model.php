@@ -36,9 +36,13 @@ abstract class Model extends Database
         return $article;
     }
 
-    public function updateArticle()
-    {
 
+    // Voir pour la mise à jour e la date quand une update est faite.
+    public function updateArticle(string $title, string $slogan, string $texte, int $id)
+    {
+        $sql = "UPDATE {$this->table} SET title = ?, slogan = ?, content = ? WHERE id = ?";
+        $stmt = $this->conenct()->prepare($sql);
+        $stmt->execute([$title, $slogan, $texte, $id]);
     }
 
     public function deleteArticle(int $id)
